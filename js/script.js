@@ -7,15 +7,22 @@
 */
 
 // Lista
-const groceryList = ['Pane', 'Pasta', 'Olio', 'Uova', 'Banane', 'Latte', 'Carote'];
+const items = ['Pane', 'Pasta', 'Olio', 'Uova', 'Banane', 'Latte', 'Carote', 'Nutella'];
 
 // Variabile Contatore
 let i = 0;
 
+// ul dell'HTML
+const list = document.querySelector('#groceryList');
+
 do {
 
-    console.log(i);
+    // Creazione nuovo elemento HTML
+    const newLi = document.createElement('li');
+    newLi.innerHTML = items[i];
+    list.append(newLi);
 
+    // Incremento elemento lista
     i++;
 
-} while (i < groceryList.length)
+} while (i < items.length)
